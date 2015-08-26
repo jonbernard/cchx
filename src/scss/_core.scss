@@ -1,0 +1,29 @@
+@import "../../node_modules/node-reset-scss/scss/reset";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// @include fab-input-reset("desktop");
+
+$blue-light: #99dfff;
+$blue: #00aeff;
+$blue-dark: #0388d1;
+$graphBlue1: $blue;
+$graphBlue2: #33beff;
+$graphBlue3: #66ceff;
+$graphBlue4: #99dfff;
+$graphBlue5: #ccefff;
+$shadow: #aaaaaa;
+$fontFamily: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: $blue-light;
+}
+
+body {
+	font-family: $fontFamily;
+	background-color: #ffffff;
+}

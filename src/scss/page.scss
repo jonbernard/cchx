@@ -1,123 +1,8 @@
-@import "../../node_modules/node-reset-scss/scss/reset";
-@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "core";
+@import "search";
+@import "header";
+@import "panel";
 
-// @include fab-input-reset("desktop");
-
-$blue-light: #99dfff;
-$blue: #00aeff;
-$blue-dark: #0388d1;
-$graphBlue1: $blue;
-$graphBlue2: #33beff;
-$graphBlue3: #66ceff;
-$graphBlue4: #99dfff;
-$graphBlue5: #ccefff;
-$shadow: #888888;
-$fontFamily: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
-
-* {
-	box-sizing: border-box;
-}
-
-a {
-	text-decoration: none;
-	color: $blue-light;
-}
-
-body {
-	font-family: $fontFamily;
-	background-color: #ffffff;
-}
-
-form {
-	margin-bottom: 25px;
-	border-bottom: 1px solid #ffffff;
-	input {
-		font-family: $fontFamily;
-		padding: 0;
-		-webkit-appearance: none;
-		color: #fff;
-		border: 0;
-		outline: none;
-		background-color: transparent;
-		&:-ms-input-placeholder {
-			color: $blue-light;
-		}
-		&::-webkit-input-placeholder {
-			color: $blue-light;
-		}
-		&:-moz-placeholder {
-			color: $blue-light;
-		}
-		&::-moz-placeholder {
-			color: $blue-light;
-		}
-		&[type="search"] {
-			font-size: 24px;
-			font-weight: lighter;
-			position: relative;
-			left: -6px;
-			width: 90%;
-			width: calc(100% - 37px);
-			&::-webkit-search-cancel-button {
-				display: none;
-			}
-		}
-	}
-	button.fa-stack {
-		top: -5px;
-		width: 3em;
-		height: 3em;
-		padding: 0;
-		border: 0;
-		background: none;
-		i {
-			top: 0;
-			&.fa-circle {
-				font-size: 3em;
-				top: 0;
-				text-shadow: 0 0 3px $shadow;
-			}
-			&.fa-search {
-				font-size: 1.5em;
-				top: 4px;
-				color: $blue;
-			}
-		}
-	}
-}
-
-header {
-	height: 250px;
-	background-color: $blue;
-	box-shadow: 0 1px 7px $shadow;
-	section {
-		position: relative;
-		width: 1200px;
-		height: 250px;
-		margin: auto;
-		nav {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			display: inline-block;
-			a {
-				display: inline-block;
-				height: 30px;
-				padding: 0 7px;
-				text-align: center;
-				text-transform: uppercase;
-				color: $blue-light;
-				&.selected {
-					color: #ffffff;
-					border-bottom: 5px solid $blue-dark;
-				}
-				&:hover {
-					color: #ffffff;
-				}
-			}
-		}
-	}
-}
 
 #page {
 	position: relative;
@@ -131,13 +16,14 @@ header {
 		> section {
 			height: 700px;
 			background-color: #ffffff;
-			box-shadow: 1px 1px 5px #888888;
+			box-shadow: 1px 1px 5px $shadow;
 		}
 	}
 	#content {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		padding: 30px 0 0 420px;
+		padding: 40px 0 0 430px;
 	}
 }
+

@@ -1,0 +1,9 @@
+.panel {
+	width: 100%;
+	min-height: 200px;
+	margin-bottom: 30px;
+	box-shadow: 1px 1px 5px $shadow;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
