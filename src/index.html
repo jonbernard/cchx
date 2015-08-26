@@ -5,20 +5,20 @@
 	<body>
 		<header>
 			<section>
-				<nav class="floating">
-					<a class="menu">Menu</a>
-					<a class="notifications">Notifications</a>
+				<nav class="floating" role="navigation">
+					<a href="#" class="menu" tabindex="3">Menu</a>
+					<a href="#" class="notifications" tabindex="4">Notifications</a>
 				</nav>
-				<nav class="main">
-					<a href="#" class="selected">Summary</a>
-					<a href="#">Activity</a>
-					<a href="#">Visits</a>
-					<a href="#">Physicians</a>
-					<a href="#">Patients</a>
-					<a href="#">Complaints</a>
-					<a href="#">Diagnoses</a>
-					<a href="#">Medications</a>
-					<a href="#">
+				<nav class="main" role="navigation">
+					<a href="#" class="selected" tabindex="5">Summary</a>
+					<a href="#" tabindex="6">Activity</a>
+					<a href="#" tabindex="7">Visits</a>
+					<a href="#" tabindex="8">Physicians</a>
+					<a href="#" tabindex="9">Patients</a>
+					<a href="#" tabindex="10">Complaints</a>
+					<a href="#" tabindex="11">Diagnoses</a>
+					<a href="#" tabindex="12">Medications</a>
+					<a href="#" tabindex="13">
 						More
 						<i class="fa fa-caret-down"></i>
 					</a> 
@@ -28,20 +28,26 @@
 		<div id="page">
 			<section id="sidebar">
 				<form id="search">
-					<input type="search" placeholder="Search for anything" />
-					<button type="submit" form="search" value="Submit" class="fa-stack">
+					<input type="search" placeholder="Search for anything" aria-label="Search for anything" tabindex="1" />
+					<button type="submit" form="search" value="Submit" class="fa-stack" aria-label="Submit Search" tabindex="2">
 						<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 						<i class="fa fa-search fa-stack-1x"></i>
 					</button>
 				</form>
-				<section id="sidebar-content">
+				<section id="sidebar-content" tabindex="14">
 					Sidebar test
 				</section>
 			</section>
 			<section id="content">
-				<div class="panel"></div>
-				<div class="panel"></div>
-				<div class="panel"></div>
+				<div id="visits" class="panel" tabindex="15">
+					<h2>Visits</h2>
+				</div>
+				<div id="insurance" class="panel" tabindex="16">
+					<h2>Insurance</h2>
+				</div>
+				<div id="patient-demographics" class="panel" tabindex="17">
+					<h2>Patient Demographics</h2>
+				</div>
 			</section>
 		</div>
 	</body>

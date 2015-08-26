@@ -14,7 +14,8 @@ function serve () {
 		open = require("open");
 
 	gulp.watch(settings.dev + "scss/*", ["scss"]);
-	gulp.watch(settings.dev + "*.html", ["html"]);
+	gulp.watch(settings.dev + "img/", ["files"]);
+	gulp.watch(settings.dev + "*.html", ["files"]);
 
 	connect.server({
 		port: 9000,
