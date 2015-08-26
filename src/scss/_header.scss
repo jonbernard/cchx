@@ -8,23 +8,46 @@ header {
 		height: 250px;
 		margin: auto;
 		nav {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			display: inline-block;
-			a {
-				display: inline-block;
-				height: 30px;
-				padding: 0 7px;
-				text-align: center;
-				text-transform: uppercase;
-				color: $blue-light;
-				&.selected {
-					color: #ffffff;
-					border-bottom: 5px solid $blue-dark;
+			&.floating {
+				position: absolute;
+				top: 40px;
+				right: 20px;
+				a {
+					display: inline-block;
+					overflow: hidden;
+					width: 30px;
+					height: 30px;
+					text-indent: -999999;
+					background: url(../img/sprite.png) no-repeat;
+					background-size: 55px;
 				}
-				&:hover {
-					color: #ffffff;
+				.menu {
+					width: 25px;
+				}
+				.notifications {
+					margin-left: 30px;
+					background-position: -25px 0;
+				}
+			}
+			&.main {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				display: inline-block;
+				a {
+					display: inline-block;
+					height: 30px;
+					padding: 0 7px;
+					text-align: center;
+					text-transform: uppercase;
+					color: $blue-light;
+					&.selected {
+						color: #ffffff;
+						border-bottom: 5px solid $blue-dark;
+					}
+					&:hover {
+						color: #ffffff;
+					}
 				}
 			}
 		}
