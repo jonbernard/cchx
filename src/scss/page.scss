@@ -1,6 +1,5 @@
 @import "../../node_modules/node-reset-scss/scss/reset";
 @import "../../node_modules/font-awesome/scss/font-awesome";
-// @import "elements/input/mixins_fab-input";
 
 // @include fab-input-reset("desktop");
 
@@ -36,7 +35,7 @@ form {
 		font-family: $fontFamily;
 		padding: 0;
 		-webkit-appearance: none;
-		color: $blue-dark;
+		color: $blue-light;
 		border: 0;
 		outline: none;
 		background-color: transparent;
