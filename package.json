@@ -1,0 +1,31 @@
+{
+  "name": "crosschx",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "homepage": "",
+  "author": "Jon Bernard",
+  "description": "",
+  "engines": {
+    "node": ">=0.10.24"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "5.2.0",
+    "cors": "^2.7.1",
+    "del": "^1.2.0",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "2.5.2",
+    "gulp-connect": "2.2.0",
+    "gulp-debug": "2.0.1",
+    "gulp-inject-string": "0.0.2",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.3",
+    "gulp-ruby-sass": "^1.0.5",
+    "hoxy": "1.2.4",
+    "lodash-node": "3.9.3",
+    "node-reset-scss": "^1.0.1",
+    "open": "0.0.5",
+    "require-dir": "0.3.0",
+    "requirejs": "2.1.18"
+  }
+}
