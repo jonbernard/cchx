@@ -30,6 +30,7 @@
 			</nav>
 		</section>
 	</header>
+	<a id="back" href="#"><i class="fa fa-angle-left">-</i> Back</a>
 	<div id="page">
 		<section id="sidebar">
 			<form id="search">
@@ -41,16 +42,36 @@
 			</form>
 			<section id="sidebar-content" tabindex="14">
 				<h1>Cardiology and Cardiac Surgery</h1>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24410.73659703338!2d-83.12448216352543!3d40.11237960963215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital!5e0!3m2!1sen!2sus!4v1440732377592" width="400" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<h3>Oxford General Medical Center - Main</h3>
+				<nav>
+					<a href="#">Add to Watch List	<i class="fa fa-caret-down"></i></a>
+					<a href="#">Share Profile</a>
+				</nav>
+				<aside id="stats">
+					<section id="visits">14k</section>
+					<section id="physicians">75</section>
+					<section id="complaints">10k</section>
+					<section id="diagnosis">11k</section>
+				</aside>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24410.73659703338!2d-83.12448216352543!3d40.11237960963215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospital!5e0!3m2!1sen!2sus!4v1440732377592" width="350" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<nav>
+					<a href="#"><i class="fa fa-map-marker"></i> Go to Map</a>
+					<a href="#"><i class="fa fa-share-alt"></i> Go to Constellation</a>
+				</nav>
 			</section>
 		</section>
 		<section id="content">
+			<div id="yearSelection">
+				2015
+				<i class="fa fa-caret-down"></i>
+			</div>
 			<div id="visits" class="panel" tabindex="15">
 				<h2>Visits</h2>
 				<div class="line" ng-controller="line"></div>
 			</div>
 			<div id="insurance" class="panel" tabindex="16">
 				<h2>Insurance</h2>
+				<i class="fa fa-info-circle"></i>
 				<div class="bar" ng-controller="bar"></div>
 			</div>
 			<div id="patient-demographics" class="panel" tabindex="17">

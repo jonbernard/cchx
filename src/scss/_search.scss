@@ -22,7 +22,7 @@ form {
 			color: $blue-light;
 		}
 		&[type="search"] {
-			font-size: 24px;
+			font-size: 22px;
 			font-weight: lighter;
 			position: relative;
 			left: -6px;
@@ -32,7 +32,6 @@ form {
 				display: none;
 			}
 			+ button.fa-stack {
-				top: -5px;
 				width: 3em;
 				height: 3em;
 				padding: 0;
@@ -42,13 +41,13 @@ form {
 				i {
 					top: 0;
 					&.fa-circle {
-						font-size: 3em;
+						font-size: 2.4em;
 						top: 0;
 						text-shadow: 0 0 3px $shadow;
 					}
 					&.fa-search {
-						font-size: 1.5em;
-						top: 4px;
+						font-size: 1em;
+						top: 2px;
 						color: $blue;
 					}
 				}

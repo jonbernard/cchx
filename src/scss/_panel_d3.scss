@@ -21,6 +21,25 @@
 		fill: #918f8f;
 	}
 }
+
+.bar section {
+	label {
+		font-size: 12px;
+		position: relative;
+		top: -7px;
+		display: inline-block;
+		height: 12px;
+		margin-right: 70px;
+		color: $blue;
+	}
+	div {
+		display: inline-block;
+		height: 20px;
+		padding: 3px;
+		background-color: $blue;
+	}
+}
+
 .map {
 	.counties {
 		fill: none;
@@ -56,23 +75,5 @@
 	}
 	.q8-9 {
 		fill: rgba(3, 136, 209, 1.0);
-	}
-}
-
-.bar section {
-	label {
-		font-size: 12px;
-		position: relative;
-		top: -7px;
-		display: inline-block;
-		height: 12px;
-		margin-right: 70px;
-		color: $blue;
-	}
-	div {
-		display: inline-block;
-		height: 20px;
-		padding: 3px;
-		background-color: $blue;
 	}
 }

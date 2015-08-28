@@ -3,6 +3,17 @@
 @import "header";
 @import "panel";
 
+#back {
+	position: absolute;
+	top: 235px;
+	left: 10px;
+	color: $grey-light;
+	i::before {
+		font-size: 15px;
+		position: relative;
+		left: 5px;
+	}
+}
 #page {
 	position: relative;
 	width: 1200px;
@@ -12,18 +23,61 @@
 		z-index: 1;
 		top: -185px;
 		display: inline-block;
-		width: 400px;
+		width: 350px;
 		> section {
-			height: 1210px;
+			height: 1197px;
 			background-color: #ffffff;
 			box-shadow: 1px 1px 5px $shadow;
+			> *:not(iframe) {
+				padding: 0 30px;
+			}
 			h1 {
-				font-size: 36px;
+				font-size: 32px;
 				font-weight: lighter;
-				line-height: 40px;
-				margin-bottom: 14px;
-				padding: 25px 38px 0;
-				color: #4f4c4d;
+				line-height: 36px;
+				margin-bottom: 5px;
+				padding-top: 25px;
+				color: $grey;
+			}
+			nav {
+				margin: 20px 0;
+				a {
+					font-size: 13px;
+					&:nth-child(2n) {
+						float: right;
+					}
+				}
+				&:last-child {
+					padding-bottom: 20px;
+					border-bottom: 1px solid #f7f7f7;
+				}
+			}
+			aside {
+				display: flex;
+				margin: 20px 0;
+				section {
+					font-size: 18px;
+					width: 25%;
+					text-align: center;
+					color: $grey;
+					&::after {
+						font-size: 12px;
+						display: block;
+						text-align: center;
+					}
+					&#visits::after {
+						content: "Visits";
+					}
+					&#physicians::after {
+						content: "Physicians";
+					}
+					&#complaints::after {
+						content: "Complaints";
+					}
+					&#diagnosis::after {
+						content: "Diagnosis";
+					}
+				}
 			}
 		}
 	}
@@ -31,6 +85,19 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
-		padding: 40px 0 70px 430px;
+		padding: 25px 0 70px 380px;
+		#yearSelection {
+			font-size: 12px;
+			position: relative;
+			right: -100%;
+			display: inline-block;
+			width: 45px;
+			margin: 0 0 15px -45px;
+			text-align: right;
+			color: $grey;
+			i {
+				margin-left: 3px;
+			}
+		}
 	}
 }

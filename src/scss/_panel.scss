@@ -8,4 +8,15 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+	&#insurance {
+		h2 {
+			display: inline-block;
+		}
+		.fa-info-circle {
+			font-size: 12px;
+			float: right;
+			margin-top: 5px;
+			color: $grey-light;
+		}
+	}
 }

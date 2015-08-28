@@ -6,6 +6,7 @@
 $blue-light: #99dfff;
 $blue: #00aeff;
 $blue-dark: #0388d1;
+$grey-light: #bdbbbc;
 $grey: #4f4c4d;
 $graphBlue1: $blue;
 $graphBlue2: #33beff;
@@ -21,7 +22,7 @@ $fontFamily: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
 
 a {
 	text-decoration: none;
-	color: $blue-light;
+	color: $blue;
 }
 
 body {
@@ -39,4 +40,10 @@ h2 {
 	font-size: 24px;
 	margin-bottom: 20px;
 	color: $grey;
+}
+
+h3 {
+	font-size: 16px;
+	margin-bottom: 20px;
+	color: $grey-light;
 }

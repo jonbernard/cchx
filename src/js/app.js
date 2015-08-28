@@ -1,7 +1,7 @@
 angular.module('init', [])
 .controller('line', ['$scope', function($scope) {
-	var margin = {top: 20, right: 50, bottom: 0, left: 50},
-	width = 730 - margin.left - margin.right,
+	var margin = {top: 20, right: 40, bottom: 0, left: 40},
+	width = 780 - margin.left - margin.right,
 	height = 200 - margin.top - margin.bottom;
 
 	var parseDate = d3.time.format("%b-%y").parse;
@@ -72,7 +72,7 @@ angular.module('init', [])
 
 	var x = d3.scale.linear()
 	.domain([0, d3.max(data)])
-	.range([0, 600]);
+	.range([0, 650]);
 
 	var barGraph = d3.select(".bar")
 	.selectAll("div")
@@ -88,7 +88,7 @@ angular.module('init', [])
 	});
 }])
 .controller('map', ['$scope', function($scope) {
-	var width = 730,
+	var width = 780,
 	height = 400;
 
 	var rateById = d3.map();
@@ -98,7 +98,7 @@ angular.module('init', [])
 	.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
 	var projection = d3.geo.albersUsa()
-	.scale(2000)
+	.scale(2200)
 	.translate([0,313]);
 
 	var path = d3.geo.path()
@@ -106,7 +106,7 @@ angular.module('init', [])
 
 	var zoom = d3.behavior.zoom()
 	.scaleExtent([1, 10])
-	.on("zoom", zoomed);
+	.on("zoom", zoomFunc);
 
 	var svg = d3.select("#patient-demographics .map").append("svg")
 	.attr("width", width)
@@ -128,16 +128,14 @@ angular.module('init', [])
 		.enter().append("path")
 		.attr("class", function(d) { return quantize(rateById.get(d.id)); })
 		.attr("d", path)
-		// .attr("transform", "translate(-360, 109)");
 
 		svg.append("path")
 		.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
 		.attr("class", "states")
 		.attr("d", path)
-		// .attr("transform", "translate(-360, 109)");
 	}
 
-	function zoomed() {
+	function zoomFunc() {
 		var translate = d3.event.translate;
 		var zoomSvg = d3.select("svg .counties").attr("transform", "translate(" + translate + ")scale(" + d3.event.scale + ")");
 		var zoomSvg2 = d3.select("svg .states").attr("transform", "translate(" + translate + ")scale(" + d3.event.scale + ")");
