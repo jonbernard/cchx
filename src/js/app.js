@@ -66,27 +66,35 @@ angular.module('init', [])
 		.attr("d", line);
 	});
 }])
-.controller('bar', ['$scope', function($scope) {
-	var data = [100, 80, 75, 15, 10],
-		i = 1;
-
-	var x = d3.scale.linear()
-	.domain([0, d3.max(data)])
-	.range([0, 650]);
-
-	var barGraph = d3.select(".bar")
-	.selectAll("div")
-	.data(data)
-	.enter().append("section");
-
-	barGraph.append("label").html(function(d) {return "Insurance";});
-	barGraph.append("div").style("width", function(d) {
-		return x(d) + "px"; 
-	}).style("opacity", function(d) {
-		i = i - .15;
-		return i; 
-	});
-}])
+.controller('bar', function($scope) {
+    $scope.graphValues = [
+      {
+          label: "Insurance",
+          value: 100,
+          opacity: 0.85
+      },
+      {
+          label: "Insurance",
+          value: 80,
+          opacity: 0.7
+      },
+      {
+          label: "Insurance",
+          value: 75,
+          opacity: 0.55
+      },
+      {
+          label: "Insurance",
+          value: 15,
+          opacity: 0.4
+      },
+      {
+          label: "Insurance",
+          value: 10,
+          opacity: 0.25
+      }
+    ];
+})
 .controller('map', ['$scope', function($scope) {
 	var width = 780,
 	height = 400;
