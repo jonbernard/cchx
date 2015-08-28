@@ -9,13 +9,22 @@
 	margin: auto;
 	#sidebar {
 		position: absolute;
-		top: -225px;
+		z-index: 1;
+		top: -200px;
 		display: inline-block;
 		width: 400px;
 		> section {
-			height: 1235px;
+			height: 1210px;
 			background-color: #ffffff;
 			box-shadow: 1px 1px 5px $shadow;
+			h1 {
+				font-size: 36px;
+				font-weight: lighter;
+				line-height: 40px;
+				margin-bottom: 14px;
+				padding: 25px 38px 0;
+				color: #4f4c4d;
+			}
 		}
 	}
 	#content {

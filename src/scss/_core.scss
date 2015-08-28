@@ -26,6 +26,7 @@ a {
 
 body {
 	font-family: $fontFamily;
+	font-weight: lighter;
 	background-color: #ffffff;
 }
 
@@ -36,6 +37,6 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	color: $grey;
 	margin-bottom: 20px;
+	color: $grey;
 }

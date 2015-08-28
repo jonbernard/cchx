@@ -1,11 +1,11 @@
 header {
-	height: 250px;
+	height: 225px;
 	background-color: $blue;
 	box-shadow: 0 1px 7px $shadow;
 	section {
 		position: relative;
 		width: 1200px;
-		height: 250px;
+		height: 225px;
 		margin: auto;
 		nav {
 			&.floating {
@@ -15,18 +15,18 @@ header {
 				a {
 					display: inline-block;
 					overflow: hidden;
-					width: 30px;
-					height: 30px;
+					width: 26px;
+					height: 25px;
 					text-indent: -999999;
 					background: url(../img/sprite.png) no-repeat;
-					background-size: 55px;
+					background-size: 47px;
 				}
 				.menu {
-					width: 25px;
+					width: 20px;
 				}
 				.notifications {
 					margin-left: 30px;
-					background-position: -25px 0;
+					background-position: -21px 0;
 				}
 			}
 			&.main {
@@ -35,9 +35,10 @@ header {
 				bottom: 0;
 				display: inline-block;
 				a {
+					font-size: 14px;
 					display: inline-block;
 					height: 30px;
-					padding: 0 7px;
+					padding: 4px 11px;
 					text-align: center;
 					text-transform: uppercase;
 					color: $blue-light;
