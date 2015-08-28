@@ -4,17 +4,16 @@
 @import "panel";
 
 #page {
-
 	position: relative;
 	width: 1200px;
 	margin: auto;
 	#sidebar {
-		position: relative;
+		position: absolute;
 		top: -225px;
 		display: inline-block;
 		width: 400px;
 		> section {
-			height: 700px;
+			height: 1235px;
 			background-color: #ffffff;
 			box-shadow: 1px 1px 5px $shadow;
 		}
