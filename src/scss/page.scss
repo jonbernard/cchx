@@ -3,8 +3,8 @@
 @import "header";
 @import "panel";
 
-
 #page {
+
 	position: relative;
 	width: 1200px;
 	margin: auto;
@@ -23,7 +23,6 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
-		padding: 40px 0 0 430px;
+		padding: 40px 0 70px 430px;
 	}
 }
-

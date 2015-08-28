@@ -14,7 +14,9 @@ function serve () {
 		open = require("open");
 
 	gulp.watch(settings.dev + "scss/*", ["scss"]);
-	gulp.watch(settings.dev + "img/", ["files"]);
+	gulp.watch(settings.dev + "img/*", ["files"]);
+	gulp.watch(settings.dev + "js/*", ["files"]);
+	gulp.watch(settings.dev + "assets/*", ["files"]);
 	gulp.watch(settings.dev + "*.html", ["files"]);
 
 	connect.server({
@@ -38,6 +40,10 @@ gulp.task("files", function() {
 		.pipe(gulp.dest(settings.dist));
 	gulp.src(settings.dev + "img/*")
 		.pipe(gulp.dest(settings.dist + "img/"));
+	gulp.src(settings.dev + "js/*")
+		.pipe(gulp.dest(settings.dist + "js/"));
+	gulp.src(settings.dev + "assets/*")
+		.pipe(gulp.dest(settings.dist + "assets/"));
 	gulp.src("node_modules/font-awesome/fonts/*")
 		.pipe(gulp.dest(settings.dist + "fonts/"));
 });

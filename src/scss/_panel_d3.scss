@@ -1,0 +1,78 @@
+.line {
+	.axis path,
+	.axis line {
+		fill: none;
+		shape-rendering: crispEdges;
+		stroke: #e9e8e8;
+	}
+	.x.axis path {
+		display: none;
+	}
+	.line {
+		fill: none;
+		stroke: $blue;
+		stroke-width: 1.5px;
+	}
+	.area {
+		fill: rgba(0, 174, 255, .4);
+		stroke-width: 0;
+	}
+	.tick text {
+		fill: #918f8f;
+	}
+}
+.map {
+	.counties {
+		fill: none;
+	}
+	.states {
+		fill: none;
+		stroke: #ffffff;
+		stroke-linejoin: round;
+	}
+	.q0-9 {
+		fill: rgba(3, 136, 209, .2);
+	}
+	.q1-9 {
+		fill: rgba(3, 136, 209, .3);
+	}
+	.q2-9 {
+		fill: rgba(3, 136, 209, .4);
+	}
+	.q3-9 {
+		fill: rgba(3, 136, 209, .5);
+	}
+	.q4-9 {
+		fill: rgba(3, 136, 209, .6);
+	}
+	.q5-9 {
+		fill: rgba(3, 136, 209, .7);
+	}
+	.q6-9 {
+		fill: rgba(3, 136, 209, .8);
+	}
+	.q7-9 {
+		fill: rgba(3, 136, 209, .9);
+	}
+	.q8-9 {
+		fill: rgba(3, 136, 209, 1.0);
+	}
+}
+
+.bar section {
+	label {
+		font-size: 12px;
+		position: relative;
+		top: -7px;
+		display: inline-block;
+		height: 12px;
+		margin-right: 70px;
+		color: $blue;
+	}
+	div {
+		display: inline-block;
+		height: 20px;
+		padding: 3px;
+		background-color: $blue;
+	}
+}

@@ -1,54 +1,63 @@
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="/style/page.css">
-	</head>
-	<body>
-		<header>
-			<section>
-				<nav class="floating" role="navigation">
-					<a href="#" class="menu" tabindex="3">Menu</a>
-					<a href="#" class="notifications" tabindex="4">Notifications</a>
-				</nav>
-				<nav class="main" role="navigation">
-					<a href="#" class="selected" tabindex="5">Summary</a>
-					<a href="#" tabindex="6">Activity</a>
-					<a href="#" tabindex="7">Visits</a>
-					<a href="#" tabindex="8">Physicians</a>
-					<a href="#" tabindex="9">Patients</a>
-					<a href="#" tabindex="10">Complaints</a>
-					<a href="#" tabindex="11">Diagnoses</a>
-					<a href="#" tabindex="12">Medications</a>
-					<a href="#" tabindex="13">
-						More
-						<i class="fa fa-caret-down"></i>
-					</a> 
-				</nav>
+<head>
+	<link rel="stylesheet" type="text/css" href="style/page.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+</head>
+<body ng-app="init">
+	<header>
+		<section>
+			<nav class="floating" role="navigation">
+				<a href="#" class="menu" tabindex="3">Menu</a>
+				<a href="#" class="notifications" tabindex="4">Notifications</a>
+			</nav>
+			<nav class="main" role="navigation">
+				<a href="#" class="selected" tabindex="5">Summary</a>
+				<a href="#" tabindex="6">Activity</a>
+				<a href="#" tabindex="7">Visits</a>
+				<a href="#" tabindex="8">Physicians</a>
+				<a href="#" tabindex="9">Patients</a>
+				<a href="#" tabindex="10">Complaints</a>
+				<a href="#" tabindex="11">Diagnoses</a>
+				<a href="#" tabindex="12">Medications</a>
+				<a href="#" tabindex="13">
+					More
+					<i class="fa fa-caret-down"></i>
+				</a> 
+			</nav>
+		</section>
+	</header>
+	<div id="page">
+		<section id="sidebar">
+			<form id="search">
+				<input type="search" placeholder="Search for anything" aria-label="Search for anything" tabindex="1" />
+				<button type="submit" form="search" value="Submit" class="fa-stack" aria-label="Submit Search" tabindex="2">
+					<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					<i class="fa fa-search fa-stack-1x"></i>
+				</button>
+			</form>
+			<section id="sidebar-content" tabindex="14">
+				Sidebar test
 			</section>
-		</header>
-		<div id="page">
-			<section id="sidebar">
-				<form id="search">
-					<input type="search" placeholder="Search for anything" aria-label="Search for anything" tabindex="1" />
-					<button type="submit" form="search" value="Submit" class="fa-stack" aria-label="Submit Search" tabindex="2">
-						<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-						<i class="fa fa-search fa-stack-1x"></i>
-					</button>
-				</form>
-				<section id="sidebar-content" tabindex="14">
-					Sidebar test
-				</section>
-			</section>
-			<section id="content">
-				<div id="visits" class="panel" tabindex="15">
-					<h2>Visits</h2>
-				</div>
-				<div id="insurance" class="panel" tabindex="16">
-					<h2>Insurance</h2>
-				</div>
-				<div id="patient-demographics" class="panel" tabindex="17">
-					<h2>Patient Demographics</h2>
-				</div>
-			</section>
-		</div>
-	</body>
+		</section>
+		<section id="content">
+			<div id="visits" class="panel" tabindex="15">
+				<h2>Visits</h2>
+				<div class="line" ng-controller="line"></div>
+			</div>
+			<div id="insurance" class="panel" tabindex="16">
+				<h2>Insurance</h2>
+				<div class="bar" ng-controller="bar"></div>
+			</div>
+			<div id="patient-demographics" class="panel" tabindex="17">
+				<h2>Patient Demographics</h2>
+				<div class="map" ng-controller="map"></div>
+			</div>
+		</section>
+	</div>
+	<script src="js/app.js"></script>
+</body>
 </html>

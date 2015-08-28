@@ -6,6 +6,7 @@
 $blue-light: #99dfff;
 $blue: #00aeff;
 $blue-dark: #0388d1;
+$grey: #4f4c4d;
 $graphBlue1: $blue;
 $graphBlue2: #33beff;
 $graphBlue3: #66ceff;
@@ -26,4 +27,15 @@ a {
 body {
 	font-family: $fontFamily;
 	background-color: #ffffff;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	color: $grey;
+	margin-bottom: 20px;
 }
